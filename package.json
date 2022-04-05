@@ -1,0 +1,13 @@
+{
+  "name": "signage",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "sumeshi96",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^18.0.1"
+  }
+}
