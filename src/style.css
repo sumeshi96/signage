@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
+
+
+body {
+    background-color: #EEEEEE;
+}
+
+.clock-wrapper {
+    width: 100%;
+    height: 100vh;
+}
+
+.clock-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+#date_id {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Graduate', cursive;
+}
+
+#time_id {
+    font-size: 130px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Graduate', cursive;
+}
+
+.today-weather-container {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 35%;
+    display: flex;
+    flex-flow: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px #999999;
+}
+
+#today {
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+.logo-temp-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.today-weather-logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 5%;
+}
+
+.temp-container {
+    flex-flow: column;
+    margin-right: 15%;
+}
+
+.temp-container p {
+    font-size: 25px;
+}
+
+.high-temp {
+    color: red;
+}
+
+.low-temp {
+    color: blue;
+}
+
+.today-rainy-percent,
+th,
+td {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #999999;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tomorrow-weather-container {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    width: 35%;
+    display: flex;
+    flex-flow: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 16px #999999;
+}
+
+#tomorrow {
+    font-size: 25px;
+    margin-left: 5%;
+}
+
+.tomorrow-weather-logo {
+    width: 150px;
+    height: 150px;
+    margin-left: 5%;
+}
+
+.tomorrow-rainy-percent,
+th,
+td {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #999999;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+
+
+.timetable-wrapper {
+    width: 100%;
+    height: 50vh;
+}
+
+.timetable-container {
+    width: 95%;
+    margin: auto;
+}
+
+.bus-wrapper {
+    width: 100%;
+    height: 50vh;
+}
