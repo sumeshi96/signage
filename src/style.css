@@ -2,17 +2,24 @@
 
 
 body {
+    margin: 0px;
     background-color: #EEEEEE;
+    height: 100%;
 }
 
-.clock-wrapper {
+.swiper-slide {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
 }
 
 .clock-container {
     position: absolute;
-    top: 20%;
+    top: 130%;
     left: 50%;
     transform: translate(-50%, -30%);
 }
@@ -34,7 +41,7 @@ body {
 
 .today-weather-container {
     position: absolute;
-    top: 50%;
+    top: 200px;
     left: 10%;
     width: 35%;
     display: flex;
@@ -63,7 +70,7 @@ body {
 
 .temp-container {
     flex-flow: column;
-    margin-right: 15%;
+    margin-right: 18%;
 }
 
 .temp-container p {
@@ -91,7 +98,7 @@ td {
 
 .tomorrow-weather-container {
     position: absolute;
-    top: 50%;
+    top: 200px;
     left: 55%;
     width: 35%;
     display: flex;
@@ -122,8 +129,6 @@ td {
     border-collapse: collapse;
     table-layout: fixed;
 }
-
-
 
 .timetable-wrapper {
     width: 100%;

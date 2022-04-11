@@ -1,3 +1,8 @@
+//swiper
+var Slider = new Swiper('.swiper', {
+
+});
+
 //日付取得
 function clock() {
     moment.locale("ja");

@@ -6,84 +6,92 @@
     <title>signage</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css" />
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-    <div class="clock-wrapper">
-        <div class="clock-container">
-            <p id="date_id">----年 --月 --日 (ー)</p>
-            <p id="time_id">--:--:--</p>
-        </div>
-        <div class="today-weather-container">
-            <p id="today">--月--日(ー)</p>
-            <div class="logo-temp-container">
-                <img src="img/orenge.jpg" class="today-weather-logo">
-                <div class="temp-container">
-                    <p id="today-high-temp" class="high-temp">最高 --℃</p>
-                    <p id="today-low-temp" class="low-temp">最低 --℃</p>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="clock-container">
+                    <p id="date_id">----年 --月 --日 (ー)</p>
+                    <p id="time_id">--:--:--</p>
+                </div>
+                <div class="today-weather-container">
+                    <p id="today">--月--日(ー)</p>
+                    <div class="logo-temp-container">
+                        <img src="img/orenge.jpg" class="today-weather-logo">
+                        <div class="temp-container">
+                            <p id="today-high-temp" class="high-temp">最高 --℃</p>
+                            <p id="today-low-temp" class="low-temp">最低 --℃</p>
+                        </div>
+                    </div>
+                    <table class="today-rainy-percent">
+                        <tr>
+                            <th>時間</th>
+                            <th>00-06</th>
+                            <th>06-12</th>
+                            <th>12-18</th>
+                            <th>18-24</th>
+                        </tr>
+                        <tr>
+                            <th>降水確率</th>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="tomorrow-weather-container">
+                    <p id="tomorrow">--月--日(ー)</p>
+                    <div class="logo-temp-container">
+                        <img src="img/orenge.jpg" class="tomorrow-weather-logo">
+                        <div class="temp-container">
+                            <p id="tomorrow-high-temp" class="high-temp">最高 --℃</p>
+                            <p id="tomorrow-low-temp" class="low-temp">最低 --℃</p>
+                        </div>
+                    </div>
+                    <table class="tomorrow-rainy-percent">
+                        <tr>
+                            <th>時間</th>
+                            <th>00-06</th>
+                            <th>06-12</th>
+                            <th>12-18</th>
+                            <th>18-24</th>
+                        </tr>
+                        <tr>
+                            <th>降水確率</th>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                            <td>---</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <table class="today-rainy-percent">
-                <tr>
-                    <th>時間</th>
-                    <th>00-06</th>
-                    <th>06-12</th>
-                    <th>12-18</th>
-                    <th>18-24</th>
-                </tr>
-                <tr>
-                    <th>降水確率</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-            </table>
-        </div>
-        <div class="tomorrow-weather-container">
-            <p id="tomorrow">--月--日(ー)</p>
-            <div class="logo-temp-container">
-                <img src="img/orenge.jpg" class="tomorrow-weather-logo">
-                <div class="temp-container">
-                    <p id="tomorrow-high-temp" class="high-temp">最高 --℃</p>
-                    <p id="tomorrow-low-temp" class="low-temp">最低 --℃</p>
+
+            <div class="swiper-slide">
+                <div class="timetable-wrapper">
+                    <div class="timetable-container">
+
+                    </div>
+                </div>
+                <div class="bus-wrapper">
+                    <div class="bus-container">
+                        <p class="bus-text">発：医師会病院前</p>
+                        <p class="bus-text">着：はこだて未来大学</p>
+                        <p id="departure">出発時刻：00:00</p>
+                        <p id="arrival">到着時刻：00:00</p>
+                    </div>
                 </div>
             </div>
-            <table class="tomorrow-rainy-percent">
-                <tr>
-                    <th>時間</th>
-                    <th>00-06</th>
-                    <th>06-12</th>
-                    <th>12-18</th>
-                    <th>18-24</th>
-                </tr>
-                <tr>
-                    <th>降水確率</th>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                    <td>---</td>
-                </tr>
-            </table>
-        </div>
-    </div>
 
-    <div class="bus-timetable">
-        <div class="timetable-wrapper">
-            <div class="timetable-container">
+            <div class="swiper-slide">
 
-            </div>
-        </div>
-
-
-        <div class="bus-wrapper">
-            <div class="bus-container">
-                <p class="bus-text">発：医師会病院前</p>
-                <p class="bus-text">着：はこだて未来大学</p>
-                <p id="departure">出発時刻：00:00</p>
-                <p id="arrival">到着時刻：00:00</p>
             </div>
         </div>
     </div>
