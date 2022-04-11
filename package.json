@@ -11,6 +11,7 @@
     "electron": "^18.0.1"
   },
   "dependencies": {
-    "moment": "^2.29.2"
+    "moment": "^2.29.2",
+    "python-shell": "^3.0.1"
   }
 }

@@ -16,3 +16,12 @@ function createWindow() {
 }
 
 app.whenReady().then(createWindow);
+
+//weather.pyからデータを受け取る
+var { PythonShell } = require('python-shell');
+
+var pyshell = new PythonShell('weather.py');
+
+pyshell.on('message', function (data) {
+    console.log(data);
+});
