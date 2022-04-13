@@ -1,5 +1,5 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('path')
+const { app, BrowserWindow, ipcMain } = require('electron');
+const path = require('path');
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -15,13 +15,26 @@ function createWindow() {
     win.loadFile('src/index.html');
 }
 
+//ウィンドウ作成処理
 app.whenReady().then(createWindow);
 
 //weather.pyからデータを受け取る
 var { PythonShell } = require('python-shell');
 
-var pyshell = new PythonShell('weather.py');
+ipcMain.handle('getWeatherData', (event, data) => {
+    //pythonに渡すパラメータ
+    var options = {
+        data: data
+    };
+    //パラメータとともに渡す
+    let pyshell = new PythonShell('src/weather.py', options);
 
-pyshell.on('message', function (data) {
-    console.log(data);
+    //pythonでコード実行、結果を受け取る
+    pyshell.on('message', async function (message) {
+        //preload.jsに送る
+        event.sender.send("return_data", message);
+        console.log(message);
+        console.log(typeof message)
+    });
 });
+

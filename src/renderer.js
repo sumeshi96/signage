@@ -18,6 +18,15 @@ function clock() {
 }
 setInterval(clock, 1000);
 
+var update = 1;
+const message = window.myapi.send({ "send_data": update });
+
+const message2 = window.myapi.on("return_data", async (data) => {
+    console.log(data);
+    console.log(typeof data);
+});
+
+
 //時刻表
 function bus() {
 

@@ -5,7 +5,8 @@
   "author": "sumeshi96",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "start:svelte": "electron --disable-gpu --disable-software-rasterizer ."
   },
   "devDependencies": {
     "electron": "^18.0.1"

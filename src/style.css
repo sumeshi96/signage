@@ -63,7 +63,7 @@ body {
 }
 
 .today-weather-logo {
-    width: 150px;
+    width: 300px;
     height: 150px;
     margin-left: 5%;
 }
@@ -114,7 +114,7 @@ td {
 }
 
 .tomorrow-weather-logo {
-    width: 150px;
+    width: 250px;
     height: 150px;
     margin-left: 5%;
 }

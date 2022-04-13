@@ -44,7 +44,6 @@ def output(soup):
 
     print(weather)
 
-
 """
     print(
         "天気："+ str(weather_telop) +"\n"
