@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <p id="test">test</p>
     <div class="swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -22,15 +21,20 @@
                     <p id="time_id">--:--:--</p>
                 </div>
                 <div class="today-weather-container">
-                    <p id="today">--月--日(ー)</p>
+                    <p id="today" class="date">--月--日(ー)</p>
                     <div class="logo-temp-container">
-                        <img src="img/orenge.jpg" class="today-weather-logo">
+                        <img src="img/orenge.jpg" class="weather-logo" id="today-weather-logo">
                         <div class="temp-container">
-                            <p id="today-high-temp" class="high-temp">最高 --℃</p>
-                            <p id="today-low-temp" class="low-temp">最低 --℃</p>
+                            <p class="high-temp">最高 <span id="today-high-temp">--℃</span></p>
+                            <p class="low-temp">最低 <span id="today-low-temp">--℃</span></p>
                         </div>
                     </div>
-                    <table class="today-rainy-percent">
+                    <div class="weather-container">
+                        <p class="weather" id="today-weather">ー</p>
+                    </div>
+
+
+                    <table class="rainy-percent">
                         <tr>
                             <th>時間</th>
                             <th>00-06</th>
@@ -40,23 +44,27 @@
                         </tr>
                         <tr>
                             <th>降水確率</th>
-                            <td>---</td>
-                            <td>---</td>
-                            <td>---</td>
-                            <td>---</td>
+                            <td id="today-00-06">---</td>
+                            <td id="today-06-12">---</td>
+                            <td id="today-12-18">---</td>
+                            <td id="today-18-24">---</td>
                         </tr>
                     </table>
                 </div>
                 <div class="tomorrow-weather-container">
-                    <p id="tomorrow">--月--日(ー)</p>
+                    <p id="tomorrow" class="date">--月--日(ー)</p>
                     <div class="logo-temp-container">
-                        <img src="img/orenge.jpg" class="tomorrow-weather-logo">
+                        <img src="img/orenge.jpg" class="weather-logo" id="tomorrow-weather-logo">
                         <div class="temp-container">
-                            <p id="tomorrow-high-temp" class="high-temp">最高 --℃</p>
-                            <p id="tomorrow-low-temp" class="low-temp">最低 --℃</p>
+                            <p class="high-temp">最高<span id="tomorrow-high-temp">--℃</span></p>
+                            <p class="low-temp">最低<span id="tomorrow-low-temp">--℃</span></p>
                         </div>
                     </div>
-                    <table class="tomorrow-rainy-percent">
+                    <div class="weather-container">
+                        <p class="weather" id="tomorrow-weather">ー</p>
+                    </div>
+
+                    <table class="rainy-percent">
                         <tr>
                             <th>時間</th>
                             <th>00-06</th>
@@ -66,33 +74,24 @@
                         </tr>
                         <tr>
                             <th>降水確率</th>
-                            <td>---</td>
-                            <td>---</td>
-                            <td>---</td>
-                            <td>---</td>
+                            <td id="tomorrow-00-06">---</td>
+                            <td id="tomorrow-06-12">---</td>
+                            <td id="tomorrow-12-18">---</td>
+                            <td id="tomorrow-18-24">---</td>
                         </tr>
                     </table>
                 </div>
             </div>
 
             <div class="swiper-slide">
-                <div class="timetable-wrapper">
-                    <div class="timetable-container">
-
-                    </div>
-                </div>
-                <div class="bus-wrapper">
-                    <div class="bus-container">
-                        <p class="bus-text">発：医師会病院前</p>
-                        <p class="bus-text">着：はこだて未来大学</p>
-                        <p id="departure">出発時刻：00:00</p>
-                        <p id="arrival">到着時刻：00:00</p>
-                    </div>
-                </div>
+                <p class="soon">Comming Soon...</p>
             </div>
 
             <div class="swiper-slide">
-
+                <p class="soon">Comming Soon...</p>
+            </div>
+            <div class="swiper-slide">
+                <p class="soon">Comming Soon...</p>
             </div>
         </div>
     </div>

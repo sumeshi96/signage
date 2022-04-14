@@ -10,9 +10,11 @@ function createWindow() {
             contextIsolation: true,
             preload: path.join(__dirname, 'preload.js')
         },
-        //frame: false
+        //frame:false;
     });
     win.loadFile('src/index.html');
+    win.setMenu(null);
+    //win.setFullScreen(true);
 }
 
 //ウィンドウ作成処理
@@ -33,8 +35,6 @@ ipcMain.handle('getWeatherData', (event, data) => {
     pyshell.on('message', async function (message) {
         //preload.jsに送る
         event.sender.send("return_data", message);
-        console.log(message);
-        console.log(typeof message)
     });
 });
 

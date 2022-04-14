@@ -1,57 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Graduate&display=swap');
 
-
+html,
 body {
     margin: 0px;
-    background-color: #EEEEEE;
     height: 100%;
+    background-color: #EEEEEE;
 }
 
-.swiper-slide {
-    width: 100%;
+.swiper {
     height: 100%;
 }
 
 .swiper-wrapper {
-    width: 100%;
-    height: 100%;
+    display: inline-block;
+    width: 1280px;
+    height: 800px;
+}
+
+.swiper-slide {
+    width: 1280px;
+    height: 800px;
+}
+
+html ::-webkit-scrollbar {
+    display: none;
 }
 
 .clock-container {
-    position: absolute;
-    top: 130%;
-    left: 50%;
-    transform: translate(-50%, -30%);
+    position: relative;
+    top: 50px;
+    width: 600px;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #date_id {
-    font-size: 40px;
     margin-top: 10px;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 40px;
     font-family: 'Graduate', cursive;
 }
 
 #time_id {
-    font-size: 130px;
     margin-top: 10px;
     margin-bottom: 10px;
+    text-align: center;
+    font-size: 130px;
     font-family: 'Graduate', cursive;
 }
 
 .today-weather-container {
-    position: absolute;
-    top: 200px;
-    left: 10%;
-    width: 35%;
     display: flex;
     flex-flow: column;
-    padding: 15px;
+    width: 35%;
+    position: absolute;
+    top: 350px;
+    left: 10%;
     border-radius: 10px;
-    box-shadow: 8px 8px 16px #999999;
+    box-shadow: 4px 4px 16px #999999;
 }
 
-#today {
+.tomorrow-weather-container {
+    display: flex;
+    flex-flow: column;
+    width: 35%;
+    position: absolute;
+    top: 350px;
+    left: 55%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 16px #999999;
+}
+
+.date {
     font-size: 25px;
     margin-left: 5%;
 }
@@ -59,18 +81,17 @@ body {
 .logo-temp-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5%;
 }
 
-.today-weather-logo {
-    width: 300px;
+.weather-logo {
+    width: 250px;
     height: 150px;
     margin-left: 5%;
 }
 
 .temp-container {
     flex-flow: column;
-    margin-right: 18%;
+    margin-right: 10%;
 }
 
 .temp-container p {
@@ -78,69 +99,39 @@ body {
 }
 
 .high-temp {
-    color: red;
+    color: #FF0000;
 }
 
 .low-temp {
-    color: blue;
+    color: #0096FF;
 }
 
-.today-rainy-percent,
-th,
-td {
-    font-size: 20px;
-    width: 100%;
-    text-align: center;
-    border: 1px solid #999999;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-.tomorrow-weather-container {
-    position: absolute;
-    top: 200px;
-    left: 55%;
-    width: 35%;
-    display: flex;
-    flex-flow: column;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 8px 8px 16px #999999;
-}
-
-#tomorrow {
-    font-size: 25px;
+.weather-container {
     margin-left: 5%;
-}
-
-.tomorrow-weather-logo {
     width: 250px;
-    height: 150px;
-    margin-left: 5%;
 }
 
-.tomorrow-rainy-percent,
+.weather {
+    text-align: center;
+}
+
+.rainy-percent,
 th,
 td {
-    font-size: 20px;
-    width: 100%;
+    font-size: 18px;
+    width: 90%;
     text-align: center;
-    border: 1px solid #999999;
+    border: 1px solid #CCCCCC;
     border-collapse: collapse;
     table-layout: fixed;
+    margin-left: 5%;
+    margin-bottom: 20px;
 }
 
-.timetable-wrapper {
-    width: 100%;
-    height: 50vh;
-}
-
-.timetable-container {
-    width: 95%;
-    margin: auto;
-}
-
-.bus-wrapper {
-    width: 100%;
-    height: 50vh;
+.soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
 }
