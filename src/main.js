@@ -15,7 +15,7 @@ function createWindow() {
     win.loadFile('src/index.html');
     win.setMenu(null);
     //win.setFullScreen(true);
-    win.webContents.openDevTools();
+    //win.webContents.openDevTools();
 }
 
 //ウィンドウ作成処理

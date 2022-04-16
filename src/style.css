@@ -26,10 +26,19 @@ html ::-webkit-scrollbar {
     height: 800px;
 }
 
-.swiper-pagenation {
+.swiper-pagination {
     top: initial;
     left: 50%;
     transform: translate(-50%, 0px);
+}
+
+.swiper-pagination-bullet-active {
+    background: #555555 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #555555;
 }
 
 .swiper-button-prev {
@@ -44,6 +53,30 @@ html ::-webkit-scrollbar {
     transform: translate(0px, -50%);
 }
 
+.fa-rotate {
+    position: absolute;
+    font-size: 50px;
+    top: 63px;
+    left: 1168px;
+    z-index: 1001;
+    transition: 10s;
+}
+
+.fa-rotate:hover {
+    animation: rotate 1s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
 #data-update {
     position: absolute;
     width: 75px;
@@ -51,7 +84,8 @@ html ::-webkit-scrollbar {
     top: 50px;
     left: 1155px;
     background: #CCCCCC;
-    z-index: 10000;
+    z-index: 1000;
+    border-radius: 10px;
 }
 
 .clock-container {
@@ -86,7 +120,7 @@ html ::-webkit-scrollbar {
     position: absolute;
     top: 350px;
     left: 10%;
-    border-radius: 10px;
+
     box-shadow: 4px 4px 16px #999999;
     font-family: 'Kosugi Maru', sans-serif;
 }

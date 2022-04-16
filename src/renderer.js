@@ -2,11 +2,17 @@
 function dataReload() {
     clock();
     forecast();
+    console.log("osu!");
 }
 dataReload();
 
-var btn = document.querySelector("#data-update");
-btn.addEventListener('click', dataReload);
+var reloadBtn = document.querySelectorAll("#data-update,i.fa-rotate")
+reloadBtn.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        dataReload();
+    });
+});
+
 
 //swiper
 var Slider = new Swiper('.swiper', {
@@ -33,8 +39,6 @@ function clock() {
     return time;
 }
 setInterval(clock, 1000);
-
-
 
 function forecast() {
 
