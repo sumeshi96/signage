@@ -6,7 +6,6 @@ function dataReload() {
 dataReload();
 
 var btn = document.querySelector("#data-update");
-console.log(btn);
 btn.addEventListener('click', dataReload);
 
 //swiper
@@ -24,8 +23,8 @@ var Slider = new Swiper('.swiper', {
 function clock() {
     moment.locale("ja");
     var fullDate = moment().format('YYYY年 MM月 DD日 (ddd)');
-    var today = moment().format('MM月 DD日 (ddd)');
-    var tomorrow = moment().add(1, 'd').format('MM月 DD日 (ddd)');
+    var today = moment().format('MM月DD日(ddd)');
+    var tomorrow = moment().add(1, 'd').format('MM月DD日(ddd)');
     var time = moment().format('HH:mm:ss');
     document.getElementById("date_id").innerHTML = fullDate;
     document.getElementById("today").innerHTML = today;
@@ -45,26 +44,39 @@ function forecast() {
     let weatherObject = JSON.parse(app_setting_text);
 
     var todayTelop = weatherObject['today']['weather'];
+    var todayHighTemp = weatherObject['today']['high_temp'];
+    var todayLowTemp = weatherObject['today']['low_temp'];
+    var tomorrowTelop = weatherObject['tomorrow']['weather'];
+    var tomorrowHighTemp = weatherObject['tomorrow']['high_temp'];
+    var tomorrowLowTemp = weatherObject['tomorrow']['low_temp'];
+
+    function addSpace(Temp) {
+        if (Temp.length == 2) {
+            return Temp = "&nbsp;&nbsp;" + Temp;
+        } else {
+            return Temp
+        }
+    }
+
     document.getElementById("today-weather").innerHTML = todayTelop;
-    document.getElementById("today-high-temp").innerHTML = weatherObject['today']['high_temp'];
-    document.getElementById("today-low-temp").innerHTML = weatherObject['today']['low_temp'];
+    document.getElementById("today-high-temp").innerHTML = addSpace(todayHighTemp);
+    document.getElementById("today-low-temp").innerHTML = addSpace(todayLowTemp);
     document.getElementById("today-00-06").innerHTML = weatherObject['today']['every_six_00-06'];
     document.getElementById("today-06-12").innerHTML = weatherObject['today']['every_six_06-12'];
     document.getElementById("today-12-18").innerHTML = weatherObject['today']['every_six_12-18'];
     document.getElementById("today-18-24").innerHTML = weatherObject['today']['every_six_18-24'];
 
-    var tomorrowTelop = weatherObject['tomorrow']['weather'];
     document.getElementById("tomorrow-weather").innerHTML = tomorrowTelop;
-    document.getElementById("tomorrow-high-temp").innerHTML = weatherObject['tomorrow']['high_temp'];
-    document.getElementById("tomorrow-low-temp").innerHTML = weatherObject['tomorrow']['low_temp'];
+    document.getElementById("tomorrow-high-temp").innerHTML = addSpace(tomorrowHighTemp);
+    document.getElementById("tomorrow-low-temp").innerHTML = addSpace(tomorrowLowTemp);
     document.getElementById("tomorrow-00-06").innerHTML = weatherObject['tomorrow']['every_six_00-06'];
     document.getElementById("tomorrow-06-12").innerHTML = weatherObject['tomorrow']['every_six_06-12'];
     document.getElementById("tomorrow-12-18").innerHTML = weatherObject['tomorrow']['every_six_12-18'];
     document.getElementById("tomorrow-18-24").innerHTML = weatherObject['tomorrow']['every_six_18-24'];
 
 
-    weatherTelop(todayTelop);
-    weatherTelop(tomorrowTelop);
+    //weatherTelop(todayTelop);
+    //weatherTelop(tomorrowTelop);
 
     /*
     function weatherTelop(telop) {

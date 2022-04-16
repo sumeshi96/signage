@@ -1,19 +1,19 @@
 {
     "today": {
-        "weather": "曇のち晴",
-        "high_temp": "12℃",
-        "low_temp": "2℃",
-        "every_six_00-06": "0%",
-        "every_six_06-12": "0%",
-        "every_six_12-18": "0%",
-        "every_six_18-24": "0%"
-    },
-    "tomorrow": {
-        "weather": "晴のち曇",
+        "weather": "晴",
         "high_temp": "13℃",
         "low_temp": "3℃",
-        "every_six_00-06": "10%",
+        "every_six_00-06": "0%",
         "every_six_06-12": "10%",
+        "every_six_12-18": "10%",
+        "every_six_18-24": "10%"
+    },
+    "tomorrow": {
+        "weather": "晴時々曇",
+        "high_temp": "13℃",
+        "low_temp": "5℃",
+        "every_six_00-06": "10%",
+        "every_six_06-12": "20%",
         "every_six_12-18": "20%",
         "every_six_18-24": "20%"
     }
