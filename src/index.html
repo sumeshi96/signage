@@ -10,10 +10,12 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
-    <div class="swiper">
+    <div id="data-update"></div>
+    <div class=" swiper">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <div class="clock-container">
@@ -82,11 +84,9 @@
                     </table>
                 </div>
             </div>
-
             <div class="swiper-slide">
                 <p class="soon">Comming Soon...</p>
             </div>
-
             <div class="swiper-slide">
                 <p class="soon">Comming Soon...</p>
             </div>
@@ -94,9 +94,11 @@
                 <p class="soon">Comming Soon...</p>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
     <script type="text/javascript" src="renderer.js"></script>
-
 </body>
 
 </html>

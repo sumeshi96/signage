@@ -7,6 +7,10 @@ body {
     background-color: #EEEEEE;
 }
 
+html ::-webkit-scrollbar {
+    display: none;
+}
+
 .swiper {
     height: 100%;
 }
@@ -22,8 +26,32 @@ body {
     height: 800px;
 }
 
-html ::-webkit-scrollbar {
-    display: none;
+.swiper-pagenation {
+    top: initial;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+.swiper-button-prev {
+    top: 50%;
+    left: 0;
+    transform: translate(0px, -50%);
+}
+
+.swiper-button-next {
+    top: 50%;
+    left: initial;
+    transform: translate(0px, -50%);
+}
+
+#data-update {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 50px;
+    left: 1155px;
+    background: #CCCCCC;
+    z-index: 10000;
 }
 
 .clock-container {
