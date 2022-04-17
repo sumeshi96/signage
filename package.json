@@ -9,10 +9,26 @@
     "start:svelte": "electron --disable-gpu --disable-software-rasterizer ."
   },
   "devDependencies": {
-    "electron": "^18.0.1"
+    "electron": "^18.0.1",
+    "electron-builder": "^23.0.3"
   },
   "dependencies": {
     "moment": "^2.29.2",
     "python-shell": "^3.0.1"
+  },
+  "build": {
+    "appId": "sumeshi.signage",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src",
+      "package,json",
+      "package-lock.json",
+      "yarn.lock"
+    ],
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }

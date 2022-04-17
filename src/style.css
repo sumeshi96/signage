@@ -113,22 +113,6 @@ html ::-webkit-scrollbar {
     font-family: 'Graduate', cursive;
 }
 
-#date_id2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 40px;
-    font-family: 'Graduate', cursive;
-}
-
-#time_id2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    font-size: 130px;
-    font-family: 'Graduate', cursive;
-}
-
 .today-weather-container {
     display: flex;
     flex-flow: column;
@@ -136,7 +120,6 @@ html ::-webkit-scrollbar {
     position: absolute;
     top: 350px;
     left: 10%;
-
     box-shadow: 4px 4px 16px #999999;
     font-family: 'Kosugi Maru', sans-serif;
 }
@@ -207,6 +190,57 @@ td {
     table-layout: fixed;
     margin-left: 5%;
     margin-bottom: 20px;
+}
+
+#date_id2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Graduate', cursive;
+}
+
+#time_id2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 130px;
+    font-family: 'Graduate', cursive;
+}
+
+.bus-container {
+    position: absolute;
+    top: 350px;
+    width: 90%;
+    height: 40%;
+    left: 5%
+}
+
+.discription {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+#bus-number {
+    text-align: center;
+    font-size: 30px;
+}
+
+.bus-time-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#from {
+    margin: 0;
+    font-size: 100px;
+}
+
+#to {
+    margin: 0;
+    font-size: 100px;
 }
 
 .soon {
