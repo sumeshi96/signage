@@ -113,6 +113,22 @@ html ::-webkit-scrollbar {
     font-family: 'Graduate', cursive;
 }
 
+#date_id2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Graduate', cursive;
+}
+
+#time_id2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 130px;
+    font-family: 'Graduate', cursive;
+}
+
 .today-weather-container {
     display: flex;
     flex-flow: column;

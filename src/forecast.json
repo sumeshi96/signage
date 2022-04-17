@@ -2,18 +2,18 @@
     "today": {
         "weather": "晴",
         "high_temp": "13℃",
-        "low_temp": "2℃",
-        "every_six_00-06": "0%",
-        "every_six_06-12": "10%",
-        "every_six_12-18": "10%",
+        "low_temp": "4℃",
+        "every_six_00-06": "---",
+        "every_six_06-12": "---",
+        "every_six_12-18": "---",
         "every_six_18-24": "10%"
     },
     "tomorrow": {
-        "weather": "晴時々曇",
-        "high_temp": "13℃",
+        "weather": "晴のち曇",
+        "high_temp": "15℃",
         "low_temp": "5℃",
         "every_six_00-06": "10%",
-        "every_six_06-12": "20%",
+        "every_six_06-12": "10%",
         "every_six_12-18": "20%",
         "every_six_18-24": "20%"
     }

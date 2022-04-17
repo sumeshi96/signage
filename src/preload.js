@@ -12,5 +12,10 @@ contextBridge.exposeInMainWorld('myapi', {
     getSetting: () => {
         const setting_path = './src/forecast.json';
         return fs.existsSync(setting_path) ? fs.readFileSync(setting_path, 'utf8') : '{}';
+    },
+
+    getBus: () => {
+        const bus_path = './src/bus-timetable.json';
+        return fs.existsSync(bus_path) ? fs.readFileSync(setting_path, 'utf8') : '{}';
     }
 });

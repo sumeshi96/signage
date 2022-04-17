@@ -2,17 +2,16 @@
 function dataReload() {
     clock();
     forecast();
-    console.log("osu!");
 }
 dataReload();
 
+//リロードボタン
 var reloadBtn = document.querySelectorAll("#data-update,i.fa-rotate")
 reloadBtn.forEach(function (btn) {
     btn.addEventListener('click', function () {
         dataReload();
     });
 });
-
 
 //swiper
 var Slider = new Swiper('.swiper', {
@@ -25,21 +24,26 @@ var Slider = new Swiper('.swiper', {
     }
 });
 
-//日付取得
+//日付・時計
 function clock() {
     moment.locale("ja");
     var fullDate = moment().format('YYYY年 MM月 DD日 (ddd)');
     var today = moment().format('MM月DD日(ddd)');
     var tomorrow = moment().add(1, 'd').format('MM月DD日(ddd)');
     var time = moment().format('HH:mm:ss');
-    document.getElementById("date_id").innerHTML = fullDate;
+
     document.getElementById("today").innerHTML = today;
     document.getElementById("tomorrow").innerHTML = tomorrow;
     document.getElementById("time_id").innerHTML = time;
+    document.getElementById("time_id2").innerHTML = time;
+    document.getElementById("date_id").innerHTML = fullDate;
+    document.getElementById("date_id2").innerHTML = fullDate;
+
     return time;
 }
 setInterval(clock, 1000);
 
+//天気
 function forecast() {
 
     var update = 1;
@@ -154,4 +158,10 @@ function forecast() {
         }
     }
     */
+}
+
+//バス時刻表
+function timetable() {
+    let timetable_text = window.myapi.getBus();
+    let timetableObject = JSON.parse(timetable_text);
 }
