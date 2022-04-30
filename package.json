@@ -23,9 +23,10 @@
     },
     "files": [
       "src",
-      "package,json",
       "package-lock.json",
-      "yarn.lock"
+      "package.json",
+      "yarn.lock",
+      "node_modules"
     ],
     "linux": {
       "target": "AppImage"
