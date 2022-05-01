@@ -14,7 +14,7 @@ function createWindow() {
     });
     win.loadFile('src/index.html');
     win.setMenu(null);
-    win.setFullScreen(true);
+    //win.setFullScreen(true);
     //win.webContents.openDevTools();
 }
 
