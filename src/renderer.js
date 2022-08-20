@@ -24,15 +24,6 @@ var Slider = new Swiper('.swiper', {
     }
 });
 
-maximizaButton.onclick = function () {
-    let contents = document.body;
-    contents.requestFullscreen();
-}
-
-exitFullScreenButton.onclick = function () {
-    document.exitFullscreen();
-}
-
 //日付・時計
 function clock() {
     moment.locale("ja");

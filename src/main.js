@@ -10,7 +10,7 @@ function createWindow() {
             contextIsolation: true,
             preload: path.join(__dirname, 'preload.js')
         },
-        //frame:false;
+        frame: false
     });
     win.loadFile('./src/index.html');
     win.setMenu(null);
@@ -30,7 +30,8 @@ ipcMain.handle('getWeatherData', (event, data) => {
         data: data
     };
     //パラメータとともに渡す
-    let pyshell = new PythonShell('./src/weather.py', options);
+    const py_path = path.join(__dirname, "weather.py");
+    let pyshell = new PythonShell(py_path, options);
 
     //pythonでコード実行、結果を受け取る
     pyshell.on('message', async function (message) {
