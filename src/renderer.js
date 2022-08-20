@@ -24,6 +24,15 @@ var Slider = new Swiper('.swiper', {
     }
 });
 
+maximizaButton.onclick = function () {
+    let contents = document.body;
+    contents.requestFullscreen();
+}
+
+exitFullScreenButton.onclick = function () {
+    document.exitFullscreen();
+}
+
 //日付・時計
 function clock() {
     moment.locale("ja");
@@ -104,58 +113,58 @@ function forecast() {
                 logo.src = "img/sun-cloud.svg";
             } else if (telop.match(/\u6674.*\u96e8/)) {
                 //晴→雨
-                //logo.src = "img/sun-rain.svg";
+                logo.src = "img/sun-rain.svg";
             } else if (telop.match(/\u6674.*\u96ea/)) {
                 //晴→雪
-                //logo.src = "img/sun-snow.svg";
+                logo.src = "img/sun-snow.svg";
             } else {
                 //晴
-                //logo.src = "img/sun.svg";
+                logo.src = "img/sun.svg";
             }
         } else if (telop.match(/^\u66c7/)) {
             //文頭が曇のとき
             if (telop.match(/\u66c7.*\u6674/)) {
                 //曇→晴
-                //logo.src = "img/cloud-sun.svg";
+                logo.src = "img/cloud-sun.svg";
             } else if (telop.match(/\u66c7.*\u96e8/)) {
                 //曇→雨
-                //logo.src = "img/cloud-rain.svg";
+                logo.src = "img/cloud-rain.svg";
             } else if (telop.match(/\u66c7.*\u96ea/)) {
                 //曇→雪
-                //logo.src = "img/cloud-snow.svg";
+                logo.src = "img/cloud-snow.svg";
             } else {
                 //曇
-                //logo.src = "img/cloud.svg";
+                logo.src = "img/cloud.svg";
             }
         } else if (telop.match(/^\u96e8/)) {
             //文頭が雨のとき
             if (telop.match(/\u96e8.*\u6674/)) {
                 //雨→晴
-                //logo.src = "img/rain-sun.svg";
+                logo.src = "img/rain-sun.svg";
             } else if (telop.match(/\u96e8.*\u66c7/)) {
                 //雨→曇
-                //logo.src = "img/rain-cloud.svg";
+                logo.src = "img/rain-cloud.svg";
             } else if (telop.match(/\u96e8.*\u96ea/)) {
                 //雨→雪
-                //logo.src = "img/rain-snow.svg";
+                logo.src = "img/rain-snow.svg";
             } else {
                 //雨
-                //logo.src = "img/rain.svg";
+                logo.src = "img/rain.svg";
             }
         } else if (telop.match(/^\u96ea/)) {
             //文頭が雪のとき
             if (telop.match(/\u96ea.*\u6674/)) {
                 //雪→晴
-                //logo.src = "img/snow-sun.svg";
+                logo.src = "img/snow-sun.svg";
             } else if (telop.match(/\u96ea.*\u66c7/)) {
                 //雪→曇
-                //logo.src = "img/snow-cloud.svg";
+                logo.src = "img/snow-cloud.svg";
             } else if (telop.match(/\u96ea.*\u96e8/)) {
                 //雪→雨
-                //logo.src = "img/snow-rain.svg";
+                logo.src = "img/snow-rain.svg";
             } else {
                 //雪
-                //logo.src = "img/snow.svg";
+                logo.src = "img/snow.svg";
             }
         }
     }

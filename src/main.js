@@ -12,7 +12,7 @@ function createWindow() {
         },
         //frame:false;
     });
-    win.loadFile('src/index.html');
+    win.loadFile('./src/index.html');
     win.setMenu(null);
     //win.setFullScreen(true);
     //win.webContents.openDevTools();
@@ -30,7 +30,7 @@ ipcMain.handle('getWeatherData', (event, data) => {
         data: data
     };
     //パラメータとともに渡す
-    let pyshell = new PythonShell('src/weather.py', options);
+    let pyshell = new PythonShell('./src/weather.py', options);
 
     //pythonでコード実行、結果を受け取る
     pyshell.on('message', async function (message) {
