@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-from regex import D
 import requests
 import json
 
