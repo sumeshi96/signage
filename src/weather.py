@@ -15,8 +15,8 @@ def main(URL):
     dict["tomorrow"] = output(soup_tomorrow)
     
     #json出力
-    with open('src/forecast.json','w') as f:
-        json.dump(dict,f,ensure_ascii=False,indent=4)
+    data_json = json.dump(dict,f,ensure_ascii=False,indent=4)
+    return data_json
 
 
 def output(soup):
